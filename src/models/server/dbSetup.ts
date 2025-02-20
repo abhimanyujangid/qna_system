@@ -10,7 +10,7 @@ import createVoteCollection from "./vote.collection";
 
 
 
-export default async function dbSetup() {
+export default async function getOrCreateDB() {
    try {
      // In first step, we will connect to the database
      await databases.get(db);

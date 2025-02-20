@@ -7,11 +7,11 @@ export default async function createQuestionCollection() {
     // Create a new collection
     await databases.createCollection(db, questionCollection, questionCollection,[
         //permissions for the collection
-        Permission.read("role:all"),
-        Permission.read("user"),
-        Permission.create("user"),
-        Permission.update("user"),
-        Permission.delete("user")
+        Permission.read("any"),
+        Permission.read("users"),
+        Permission.create("users"),
+        Permission.update("users"),
+        Permission.delete("users")
     ]);
     console.log(`Collection ${questionCollection} created`);
 
