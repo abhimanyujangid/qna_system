@@ -1,41 +1,51 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# See https://help.github.com/en/articles/ignoring-files#create-a-gitignore-file
+# for more information on how to write a .gitignore file
 
 # dependencies
 /node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+/public/lib
+
+# build
+/build
 
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
-
 # production
-/build
+/dist
 
 # misc
 .DS_Store
-*.pem
+.env
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
 
-# debug
+# cache
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
+pids
+repos
+sass_cache
+tested-apps
 
-# env files (can opt-in for committing if needed)
-.env*
+# editor
+*.sublime-project
+*.sublime-workspace
+*.vscode
 
-# vercel
+# IDEs
+.idea
+.vscode
+
+# misc
+.netlify
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+.env.bak
 .vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+now.json

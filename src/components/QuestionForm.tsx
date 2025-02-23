@@ -1,6 +1,7 @@
 "use client";
 
 import RTE from "@/components/RTE";
+import Meteors from "@/components/magicui/meteors";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useAuthStore } from "@/store/Auth";
@@ -13,7 +14,6 @@ import React from "react";
 import { databases, storage } from "@/models/client/config";
 import { db, questionAttachmentBucket, questionCollection } from "@/models/name";
 import { Confetti } from "@/components/magicui/confetti";
-import { Meteors } from "./magicui/meteors";
 
 const LabelInputContainer = ({
     children,

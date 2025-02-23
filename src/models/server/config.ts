@@ -6,7 +6,7 @@ let client = new Client();
 
 client
     .setEndpoint(env.appwrite.endpoint) // Your API Endpoint
-    .setProject(env.appwrite.projectid) // Your project ID
+    .setProject(env.appwrite.projectId) // Your project ID
     .setKey(env.appwrite.apikey) // Your secret API key
     
 ;
@@ -18,10 +18,3 @@ const users = new Users(client)
 
 
 export { client, databases, users, avatars, storage}
-
-
-
-
-
-/// Notes: for servier side we con't copy the code from the client side
-// for this we need sdk for node js

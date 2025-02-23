@@ -1,8 +1,8 @@
 "use client";
 
-import { IconCloud } from "@/components/magicui/icon-cloud";
-import { Particles } from "@/components/magicui/particles";
-import { ShimmerButton } from "@/components/magicui/shimmer-button";
+import IconCloud from "@/components/magicui/icon-cloud";
+import Particles from "@/components/magicui/particles";
+import ShimmerButton from "@/components/magicui/shimmer-button";
 import { useAuthStore } from "@/store/Auth";
 import Link from "next/link";
 import React from "react";
@@ -94,7 +94,7 @@ const HeroSectionHeader = () => {
                 </div>
                 <div className="flex items-center justify-center">
                     <div className="relative max-w-[32rem] overflow-hidden">
-                        <IconCloud icons={slugs} />
+                        <IconCloud iconSlugs={slugs} />
                     </div>
                 </div>
             </div>
