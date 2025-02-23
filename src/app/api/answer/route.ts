@@ -33,7 +33,18 @@ export async function POST(request: NextRequest) {
 
 export async function DElETE(request: NextRequest) {
     try {
-        
+        const {answerId}  = await request.json();
+        const ans = await databases.getDocument(db, answerCollection, answerId);
+        const response = await databases.deleteDocument(db, answerCollection, answerId);
+        // Decrease author reputation
+        const prefs = await users.getPrefs<UserPrefs>(ans.authorId)
+        await users.updatePrefs<UserPrefs>(ans.authorId, {
+            reputation: Number(prefs.reputation) - 1
+        })
+        return NextResponse.json(
+            {data: response}, 
+            {status: 200}
+        )
     } catch (error:any) {
         return NextResponse.json(
             {
