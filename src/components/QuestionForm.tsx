@@ -48,10 +48,12 @@ const QuestionForm = ({ question }: { question?: Models.Document }) => {
     const [formData, setFormData] = React.useState({
         title: String(question?.title || ""),
         content: String(question?.content || ""),
-        authorId: user?.$id,
+        authorId: user?.$id || "",
         tags: new Set((question?.tags || []) as string[]),
         attachment: null as File | null,
     });
+
+    console.log("formData", formData);
 
     const [loading, setLoading] = React.useState(false);
     const [error, setError] = React.useState("");
@@ -221,6 +223,7 @@ const QuestionForm = ({ question }: { question?: Models.Document }) => {
                             attachment: files[0],
                         }));
                     }}
+                    className="text-gray-100s"
                 />
             </LabelInputContainer>
             <LabelInputContainer>
