@@ -1,25 +1,6 @@
-import confetti from "canvas-confetti";
+import confetti, { Options, create, shapeFromPath, shapeFromText } from "canvas-confetti";
 
-interface ConfettiOptions extends confetti.Options {
-    particleCount?: number;
-    angle?: number;
-    spread?: number;
-    startVelocity?: number;
-    decay?: number;
-    gravity?: number;
-    drift?: number;
-    flat?: boolean;
-    ticks?: number;
-    origin?: { x: number; y: number };
-    colors?: string[];
-    shapes?: confetti.Shape[];
-    zIndex?: number;
-    disableForReducedMotion?: boolean;
-    useWorker?: boolean;
-    resize?: boolean;
-    canvas?: HTMLCanvasElement | null;
-    scalar?: number;
-}
+interface ConfettiOptions extends Options {}
 
 const Confetti = (options: ConfettiOptions) => {
     if (options.disableForReducedMotion && window.matchMedia("(prefers-reduced-motion)").matches) {
@@ -27,7 +8,7 @@ const Confetti = (options: ConfettiOptions) => {
     }
 
     const confettiInstance = options.canvas
-        ? confetti.create(options.canvas, {
+        ? create(options.canvas, {
               resize: options.resize ?? true,
               useWorker: options.useWorker ?? true,
           })
@@ -39,11 +20,11 @@ const Confetti = (options: ConfettiOptions) => {
 };
 
 Confetti.shapeFromPath = (options: { path: string; [key: string]: any }) => {
-    return confetti.shapeFromPath({ ...options });
+    return shapeFromPath({ ...options });
 };
 
 Confetti.shapeFromText = (options: { text: string; [key: string]: any }) => {
-    return confetti.shapeFromText({ ...options });
+    return shapeFromText({ ...options });
 };
 
 export { Confetti };

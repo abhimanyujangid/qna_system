@@ -3,8 +3,5 @@
   "/questions/page": "app/questions/page.js",
   "/questions/ask/page": "app/questions/ask/page.js",
   "/questions/[quesId]/[quesName]/page": "app/questions/[quesId]/[quesName]/page.js",
-  "/api/vote/route": "app/api/vote/route.js",
-  "/users/[userId]/[userSlug]/page": "app/users/[userId]/[userSlug]/page.js",
-  "/users/[userId]/[userSlug]/edit/page": "app/users/[userId]/[userSlug]/edit/page.js",
   "/users/[userId]/[userSlug]/questions/page": "app/users/[userId]/[userSlug]/questions/page.js"
 }
