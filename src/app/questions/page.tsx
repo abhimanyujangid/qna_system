@@ -1,5 +1,5 @@
 import { databases, users } from '@/models/server/config';
-import { answerCollection, db, voteCollection, questionCollection } from '@/models/name';
+import { answerCollection, db, voteCollection, questionCollection } from '@/models';
 import { Query } from 'node-appwrite';
 import React from 'react';
 import Link from 'next/link';

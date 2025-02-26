@@ -1,7 +1,7 @@
 'use client';
 
 import { databases } from '@/models/client/config';
-import { db, questionCollection } from '@/models/name';
+import { db, questionCollection } from '@/models';
 import { useAuthStore } from '@/store/Auth';
 import { IconTrash } from '@tabler/icons-react';
 import { useRouter } from 'next/navigation';

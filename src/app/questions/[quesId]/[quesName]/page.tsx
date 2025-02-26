@@ -12,7 +12,7 @@ import {
     questionCollection,
     commentCollection,
     questionAttachmentBucket,
-} from '@/models/name';
+} from '@/models';
 import { databases, users } from '@/models/server/config';
 import { storage } from '@/models/client/config';
 import { UserPrefs } from '@/store/Auth';

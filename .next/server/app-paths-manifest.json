@@ -1,8 +1,8 @@
 {
-  "/page": "app/page.js",
   "/questions/page": "app/questions/page.js",
   "/questions/ask/page": "app/questions/ask/page.js",
   "/questions/[quesId]/[quesName]/page": "app/questions/[quesId]/[quesName]/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/users/[userId]/[userSlug]/questions/page": "app/users/[userId]/[userSlug]/questions/page.js"
+  "/api/vote/route": "app/api/vote/route.js",
+  "/(auth)/register/page": "app/(auth)/register/page.js",
+  "/users/[userId]/[userSlug]/page": "app/users/[userId]/[userSlug]/page.js"
 }
